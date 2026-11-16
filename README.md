@@ -4,4 +4,5 @@ Itzamna is a small programming language written entirely in words. Numbers are C
 The design goals are a small grammar, one job for every word, and semantics close to Python where possible.
 
 What does the name Itzamna mean?
+
 Itzamná was the creator god in the Maya religion. He was thought to have brought the art of writing and the calendar to humanity. The name might mean “lizard house” or “leguan house”.
