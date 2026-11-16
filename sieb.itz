@@ -1,0 +1,41 @@
+# Sieb des Eratosthenes: alle Primzahlen unter N
+
+wa N kaba la ajaw ka kal                # N = 100
+
+# eine Liste mit N Einsen: Eintrag i = jun heisst "i ist (noch) eine Primzahl"
+wa istPrim kaba uhaj kal kal
+wa i kaba mih kal
+ichnal i kukul N kabis
+	ek istPrim kabis jun kal
+	wa i kaba i tzak jun kal
+	kal
+
+# 0 und 1 sind keine Primzahlen
+wa istPrim ta mih kaba mih kal
+wa istPrim ta jun kaba mih kal
+
+# fuer jedes p, das noch Primzahl ist: alle Vielfachen ab p*p streichen
+wa p kaba ka kal
+ichnal p on p kukul N kabis
+	jolom istPrim mab p bahis jun kabis
+		wa m kaba p on p kal
+		ichnal m kukul N kabis
+			wa istPrim ta m kaba mih kal
+			wa m kaba m tzak p kal
+			kal
+		kal
+	wa p kaba p tzak jun kal
+	kal
+
+# alle Zahlen einsammeln, die uebrig geblieben sind
+wa Primzahlen kaba uhaj kal kal
+wa k kaba mih kal
+ichnal k kukul N kabis
+	jolom istPrim mab k bahis jun kabis
+		ek Primzahlen kabis k kal
+		kal
+	wa k kaba k tzak jun kal
+	kal
+
+tzib Primzahlen kal
+mut
